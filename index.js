@@ -1,14 +1,5 @@
 const inquirer = require("inquirer");
 const db = require("./db");
-const mysql = require("mysql2");
-
-const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "CodingCalvin360!",
-  database: "employee_db",
-});
 
 async function mainMenu() {
   const { choices } = await inquirer.prompt([
