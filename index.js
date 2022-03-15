@@ -72,10 +72,12 @@ async function addDepartment() {
 
 async function addRole() {
   const departments = await db.viewAllDepartments();
+  console.log(departments);
   const departmentChoices = departments.map(({ id, name }) => ({
-    name: name,
-    value: id,
+    department: name,
+    id: id,
   }));
+  console.log(departmentChoices);
   const role = await inquirer.prompt([
     {
       type: "input",
